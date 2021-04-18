@@ -1,0 +1,109 @@
+.Wrapper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-color: #e3e1de;
+	display: grid;
+	place-content: center;
+}
+
+.SettingsConfirm {
+	padding: 7px 15px;
+	margin-top: 15px;
+	border: none;
+	background-color: var(--green);
+	border-radius: 5px;
+	color: var(--white);
+	cursor: pointer;
+}
+
+.SettingsStatus {
+	position: absolute;
+	bottom: -28px;
+	left: 0;
+	font-size: 10px;
+	display: block;
+}
+
+.SettingsStatus[data-status='true'] {
+	color: var(--green);
+}
+
+.SettingsStatus[data-status='false'] {
+	color: var(--red);
+}
+
+.SettingsContainer {
+	position: relative;
+	width: 100%;
+}
+
+.SettingsWindow {
+	position: relative;
+	background-color: white;
+	width: 40vw;
+	min-width: 300px;
+	height: 50vh;
+	border-radius: 10px;
+	padding: 5%;
+	display: grid;
+	align-items: center;
+	box-shadow: 0px 3px 10px #0000001a;
+}
+
+@media (max-width: 768px) {
+	.SettingsWindow {
+		width: 80vw;
+	}
+}
+
+@media (max-width: 1024px) {
+	.SettingsWindow {
+		width: 60vw;
+	}
+}
+
+@media (max-width: 768px) {
+	.SettingsInput {
+		width: 100%;
+	}
+}
+
+.SettingsInput {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+}
+
+.SettingsInput label {
+	font-size: 12px;
+	color: var(--black);
+}
+
+.Settings input {
+	all: unset;
+	border: none;
+	border-bottom: 1px solid var(--black);
+	height: 25px;
+	cursor: text;
+}
+
+.BackArrow {
+	position: absolute;
+	top: 7%;
+	left: 5%;
+}
+
+.BackArrow path {
+	fill: var(--black);
+}
+
+.BackArrow svg {
+	width: 20px;
+	height: 100%;
+	transition: 0.2s transform;
+}
+
+.BackArrow:hover svg {
+	transform: translateX(-3px);
+}

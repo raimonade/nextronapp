@@ -4,6 +4,9 @@ copyright: Copyright © 2018 Yoshihide Shiono
 directories:
   output: dist
   buildResources: resources
+extraResources:
+  from: "resources/app"
+  to: "app"
 files:
   - from: .
     filter:

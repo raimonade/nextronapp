@@ -22,18 +22,8 @@ if (isProd) {
 
   if (isProd) {
     await mainWindow.loadURL('app://./home.html');
-    spawn(`start ./resources/app/app`, {
-      detached: false,
-      shell: true,
-      stdio: 'pipe'
-    });
   } else {
     const port = process.argv[2];
-    spawn(`python3 app.py ${port}`, {
-      detached: true,
-      shell: true,
-      stdio: 'inherit'
-    });
     await mainWindow.loadURL(`http://localhost:${port}/home`);
     mainWindow.webContents.openDevTools();
   }

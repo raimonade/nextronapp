@@ -9,10 +9,11 @@
     "dev": "nextron",
     "build": "nextron build",
     "postinstall": "electron-builder install-app-deps",
-    "pybuild":"pyinstaller app.py --distpath ./resources --noconfirm --noconsole"
+    "pybuild": "pyinstaller app.spec --distpath ./resources --noconfirm --noconsole"
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "child_process": "^1.0.2",
     "electron-serve": "^1.1.0",
     "electron-store": "^7.0.2",
     "next-fonts": "^1.5.1",

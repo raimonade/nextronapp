@@ -2,8 +2,13 @@ import '../styles/globals.scss';
 import React from 'react';
 import Head from 'next/head';
 import type { AppProps } from 'next/app';
+import electron from 'electron';
 
-export default function(props: AppProps) {
+if (electron && electron.ipcRenderer) {
+  electron.ipcRenderer.send('getPythonPort');
+}
+
+export default function App(props: AppProps) {
   const { Component, pageProps } = props;
 
   return (
